@@ -70,6 +70,14 @@ mixpanel.track = function(eventName, eventProperties, onSuccess, onFail) {
   exec(onSuccess, onFail, 'Mixpanel', 'track', [eventName, eventProperties]);
 };
 
+mixpanel.track = function(revenue, eventProperties, onSuccess, onFail) {
+  if (!revenue) {
+    return onFail(errors.invalid('event', revenue));
+  }
+
+  exec(onSuccess, onFail, 'Mixpanel', 'people_track_charge', [parseFloat(revenue), eventProperties]);
+};
+
 
 // PEOPLE API
 
