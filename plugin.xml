@@ -17,7 +17,7 @@
     </engines>
 
     <js-module src="www/mixpanel.js" name="Mixpanel">
-        <clobbers target="mixpanel"/>
+        <clobbers target="mixpanelCordova"/>
     </js-module>
 
 
@@ -210,10 +210,10 @@
         <js-module src="src/browser/MixpanelProxy.js" name="MixpanelProxy">
             <runs />
         </js-module>
-        
+
         <asset src="src/browser/mixpanel-js-lib.js" target="plugins/cordova-plugin-mixpanel/src/browser/mixpanel-js-lib.js"/>
-        
-        
+
+
     </platform>
 
 </plugin>

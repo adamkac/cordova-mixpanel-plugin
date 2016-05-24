@@ -9,7 +9,7 @@ var errors = {
   }
 };
 
-window.mixpanel = null; // clean plugin method
+window.mixpanelCordova = null; // clean plugin method
 
 
 // On Mixpanel lib Loaded
@@ -303,6 +303,6 @@ function on_snippet_loaded() {
 })(document, window['mixpanel'] || []);
 
 
-module.exports = window.mixpanel;
+module.exports = window.mixpanelCordova;
 
 require("cordova/exec/proxy").add("Mixpanel", module.exports);

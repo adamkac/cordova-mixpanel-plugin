@@ -30,14 +30,14 @@ older versions:
 - showSurvey(onSuccess, onFail) **currently only iOS**
   -  by default the SDK attempts to show any available survey at app launch.  If you'd like to trigger a survey after a particular action though use this.
 
-**window.mixpanel.people:**
+**window.mixpanelCordova.people:**
 
 - identify(distinctId, onSuccess, onFail)
 - increment(peopleProperties, onSuccess, onFail)
 - setPushId(pushId, onSuccess, onFail)
   - More info about push notifications at:
-    - [android](https://mixpanel.com/site_media/doctyl/uploads/Android-spec/com/mixpanel/android/mpmetrics/MixpanelAPI.People.html#initPushHandling(java.lang.String))
-    - [ios](https://mixpanel.com/help/reference/ios-push-notifications)
+    - [android](https://mixpanelCordova.com/site_media/doctyl/uploads/Android-spec/com/mixpanel/android/mpmetrics/MixpanelAPI.People.html#initPushHandling(java.lang.String))
+    - [ios](https://mixpanelCordova.com/help/reference/ios-push-notifications)
   - Usage example using the [PhoneGap Push Plugin](https://github.com/phonegap/phonegap-plugin-push):
   ```
     var push = PushNotification.init({
@@ -45,7 +45,7 @@ older versions:
         'ios': {'alert': 'true', 'badge': 'true', 'sound': 'true'}
     });
     push.on('registration', function(data) {
-      mixpanel.people.setPushId(data.registrationId, function onSuccess(){}, function onFail(){});
+      mixpanelCordova.people.setPushId(data.registrationId, function onSuccess(){}, function onFail(){});
     });
   ```
 - set(peopleProperties, onSuccess, onFail)
