@@ -22,7 +22,6 @@
 
 
     <platform name="android">
-
         <!-- config.xml -->
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Mixpanel">
@@ -63,6 +62,8 @@
               </intent-filter>
             </receiver>
         </config-file>
+
+        <framework src="mixpanel.gradle" custom="true" type="gradleReference" />
     </platform>
 
 
