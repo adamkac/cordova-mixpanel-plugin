@@ -283,7 +283,7 @@ public class MixpanelPlugin extends CordovaPlugin {
         if (properties == null) {
             properties = new JSONObject();
         }
-        mixpanel.getPeople().trackCharge(pushId, properties);
+        mixpanel.getPeople().trackCharge(amount, properties);
         cbCtx.success();
         return true;
     }
