@@ -43,8 +43,8 @@ public class MixpanelPlugin extends CordovaPlugin {
         PEOPLE_INCREMENT("people_increment"),
         PEOPLE_SET_PUSH_ID("people_setPushId"),
         PEOPLE_SET("people_set"),
-        PEOPLE_SET_ONCE("people_set_once");
-        // PEOPLE_TRACK_CHARGE("people_track_charge");
+        PEOPLE_SET_ONCE("people_set_once"),
+        PEOPLE_TRACK_CHARGE("people_track_charge");
 
         private final String name;
         private static final Map<String, Action> lookup = new HashMap<String, Action>();
