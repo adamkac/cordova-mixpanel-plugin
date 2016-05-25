@@ -64,6 +64,7 @@
         </config-file>
 
         <framework src="mixpanel.gradle" custom="true" type="gradleReference" />
+        <framework src="com.android.support:support-v13:23+" />
     </platform>
 
 
